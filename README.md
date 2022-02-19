@@ -12,14 +12,14 @@ All commands have an asterisk (*) as prefix
 
 **User Commands**
 
-* *kickafter <date>
+* *kickafter <given_date>
   
   Kicks every account on the server that has been created after the given date. If no date is provided, every account which is newer than 14 days will be kicked
   
   The date format is dd/mm/yyyy
 
 
-* *banafter <date>
+* *banafter <given_date>
   
   Bans every account on the server that has been created after the given date. If no date is provided, every account which is newer than 14 days will be banned
   
@@ -31,7 +31,7 @@ All commands have an asterisk (*) as prefix
   The member received as parameter will be added to the whitelist. If a user is whitelisted, they won't be affected by other commands.
 
 
-* *setmindate <date>
+* *setmindate <given_date>
  
   Sets a minimum account creation date for users that try to enter the server. Accounts that have been created after the minimum date won't be able to join the server. Implicitly set to None.
   
