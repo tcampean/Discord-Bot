@@ -28,7 +28,12 @@ All commands have an asterisk (*) as prefix
 
 * *whitelist <discord.Member>
   
-  The member received as parameter will be added to the whitelist. If a user is whitelisted, they won't be affected by other commands.
+  The member received as parameter will be added to the whitelist. If a user is whitelisted, they won't be affected by other commands. If no parameter given, every user from the server will be added to the whitelist
+
+
+* *rwhitelist <discord.Member>
+
+  The member received as parameter will be removed from the whitelist. The user can now be affected by bot commands. If no parameter given, every user from the server will be removed from the whitelist
 
 
 * *setmindate <given_date>
