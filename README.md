@@ -1,8 +1,7 @@
 # Discord-Bot
 A Discord Bot dedicated to managing user entries and block suspicious accounts.
 
-The bot's main functionalities revolve around the users' account creation date. A newly created discord account might be considered suspect depending of the server's role and activity that
-they are trying to join.
+The bot's main functionalities revolve around the users' account creation date. A newly created discord account might be considered suspect depending on the server's role and activity
 
 The settings of each server are saved in a list and they are independent of eachother.
 
