@@ -137,7 +137,8 @@ async def setmindate(ctx, date=None,):
 async def getmindate(ctx):
     for server in server_list:
         if server.id == ctx.guild.id:
-            print(server.mindate)
+            await ctx.send(str(server.mindate))
+            break
 
 
 client.run(TOKEN)
