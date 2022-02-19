@@ -117,9 +117,22 @@ async def whitelist(ctx, member: discord.Member = None):
     elif member in ctx.guild.members:
         server_data.whitelist.append(member)
 
+@client.command()
+async def rwhitelist(ctx, member:discord.Member = None):
+    server_data = ''
+    for server in server_list:
+        if server.id == ctx.guild.id:
+            server_data = server
+            break
+    if not member:
+        server_data.whitelist.clear()
+    elif member in ctx.guild.members and member in server_data.whitelist:
+        server_data.whitelist.remove(member)
+    print (server_data.whitelist)
+
 
 @client.command()
-async def setmindate(ctx, date=None,):
+async def setmindate(ctx, date=None):
     if not date:
         return
     try:
@@ -137,8 +150,7 @@ async def setmindate(ctx, date=None,):
 async def getmindate(ctx):
     for server in server_list:
         if server.id == ctx.guild.id:
-            await ctx.send(str(server.mindate))
-            break
+            print(server.mindate)
 
 
 client.run(TOKEN)
